@@ -5,6 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const del = require('del');
 const concatCss = require('gulp-concat-css');
+const imagemin = require('gulp-imagemin');
 
 const paths = {
   layouts: {
@@ -26,6 +27,10 @@ const paths = {
   vendorsJs: {
     src: 'app/vendors/**/*.js',
     dest: 'build/js/vendors'
+  },
+  images: {
+    src: 'app/images/*',
+    dest: 'build/images'
   }
 };
 
@@ -44,6 +49,13 @@ function browserSync(done) {
 function browserSyncReload(done) {
   browsersync.reload();
   done();
+}
+
+function img() {
+  return gulp
+    .src(paths.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.images.dest));
 }
 
 // Clean build files
@@ -102,6 +114,7 @@ function watchFiles() {
   gulp.watch(paths.layouts.src, html)
   gulp.watch(paths.styles.src, css)
   gulp.watch(paths.scripts.src, js)
+  gulp.watch(paths.images.src, img)
 }
 
 const watch = gulp.parallel(watchFiles, browserSync);
@@ -110,8 +123,9 @@ const build = gulp.series(clean, gulp.parallel(html, css, js, copiedCss, copiedJ
 exports.html = html;
 exports.css = css;
 exports.js = js;
-exports.copiedCss = copiedCss
-exports.copiedJs = copiedJs
+exports.img = img;
+exports.copiedCss = copiedCss;
+exports.copiedJs = copiedJs;
 exports.clean = clean;
 exports.watch = watch;
 exports.build = build;
