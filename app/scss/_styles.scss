@@ -38,7 +38,6 @@ header {
   left:0;
   z-index: 1;
   background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
-
 }
 
 .container-welcome {
@@ -61,10 +60,11 @@ nav {
   font-size: 2.2rem;
   position: absolute;
   top: 50%;
-  right: 2.5rem;
+  right: 9.5rem;
   transform: translateY(-50%);
   cursor: pointer;
   z-index:1000;
+  text-shadow: 0.1rem 0.1rem 0.2rem $secondFontColor;
 }
 
 .fa-times:before {
@@ -76,7 +76,7 @@ nav {
   position: fixed;
   top: -1rem;
   left: 0;
-  width: 70%;
+  width: 40%;
   height: 100vh;
   background-color: $mainFontColor;
   padding: 4.4rem;
@@ -142,11 +142,22 @@ nav {
   color: $secondFontColor;
 }
 
+.logo {
+  width: 100%;
+}
+
+.headline-logo {
+  color: $white;
+  font-size: 3.5rem;
+  font-family: $logo;
+  text-shadow: 0.1rem 0.1rem 0.2rem $secondFontColor;
+}
+
 //hero
 
 .hero{
   width: 100%;
-  //height: 100vh;
+  height: 100vh;
   background: url("../images/hero.jpg") center no-repeat;
   background-size: cover;
   display: flex;
@@ -155,7 +166,7 @@ nav {
 }
 
 .sub-headline {
-  font-size: 8rem;
+  font-size: 6rem;
   font-family: $tribal;
   color: $mainFontColor;
   line-height: .4;
@@ -182,7 +193,7 @@ nav {
 .line {
   height: 0.2rem;
   width: 100%;
-  max-width: 9rem;
+  max-width: 14rem;
   background-color: $mainFontColor;
   position: relative;
   margin: 0.5rem;
@@ -208,8 +219,8 @@ nav {
 }
 
 .asterisk {
-  font-size: 1.2rem;
-  color: $secondFontColor;
+  font-size: 2rem;
+  color: $mainFontColor;
 }
 .headline-description{
   font-size: 2rem;
@@ -219,13 +230,14 @@ nav {
   display: inline-block;
   font-size: 1.6rem;
   color: $secondFontColor;
+  margin-top: 1rem;
 }
 
 .cta-btn {
   background-color: $mainFontColor;
   padding: 1rem;
-  border-radius: 0.3rem;
-  transition:background-color .5s;
+  border-radius: 1rem;
+  transition:bacground-color .5s;
 }
 
 .cta-btn:hover,
@@ -235,11 +247,202 @@ nav {
 }
 
 .text-btn {
-  font-family: $tribal;
-  font-size: 3rem;
-  padding: 0.5rem  0.5rem;
+
+
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 //discover story
+.global-headline {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.headline-dark {
+  color: $mainFontColor;
+  font-size: 3rem;
+  //text-shadow: 1px 1px 1px $secondFontColor;
+  margin: 1rem;
+}
+
+.discover-our-story .global-headline {
+  margin-top: 7rem;
+  letter-spacing: 0.7rem;
+
+}
+
+.sub-headline-dark {
+  font-size: 6rem;
+  font-family: $tribal;
+  color: $secondFontColor;
+  line-height: .4;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.info {
+  text-align: center;
+}
+
+.container-description {
+  margin-bottom: 2rem;
+  line-height: 2.5rem;
+}
+.body-btn {
+  position: relative;
+  color: $secondFontColor;
+  transition: color .5s;
+}
+
+.body-btn::before {
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  background-color: $secondFontColor;
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  transition: background-color .5s;
+}
+
+.body-btn:hover,
+.body-btn:focus {
+ color: $mainFontColor;
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+  background-color: $mainFontColor;
+}
+
+//tattoos
+
+.my-tattoos {
+  background: url("../images/327729-P9L56L-554.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.between {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+//perfect blend
+
+.perfect-blend {
+  background: url("../images/327729-P9L56L-554.jpg") center no-repeat;
+  background-size: cover;
+}
+
+
+//footer
+footer {
+  padding: 8rem 0;
+  background-color: $mainFontColor;
+  color: $white;
+  text-align: center;
+  position: relative;
+}
+
+.back-to-top {
+  width: 7rem;
+  height: 7rem;
+  background-color: $mainFontColor;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.back-to-top i {
+  color: $white;
+  display: block;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.footer-content {
+  //overflow: hidden;
+}
+
+.footer-content h4{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 100;
+}
+
+.footer-content .asterisk {
+  color: $white;
+  margin: 2rem 0;
+}
+
+.footer-content-about {
+  margin-bottom: 5.4rem;
+}
+
+.footer-content-about p{
+  line-height: 2;
+}
+
+.social-icons {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-inline-start: 0;
+}
+
+.social-icons i {
+  color: $white;
+  font-size: 2rem;
+  padding: .8rem 2rem;
+  opacity: 0.5;
+  transition: color 0.5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+ color: $secondFontColor;
+}
+
+.newsletter-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.newsletter-btn {
+  background-color: transparent;
+  border:none;
+  color: $mainFontColor;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10rem;
+}
+
+//media queries
 
 
