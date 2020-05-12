@@ -5,9 +5,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 3.9rem 0;
+  overflow: hidden;
 }
+
 
 img {
   width: 100%;
@@ -23,7 +29,7 @@ font-size: 1.6rem;
 }
 
 .container {
-  width: 100%;
+  //width: 100%;
   max-width: 122.5rem;
   margin: 0 auto;
   padding: 0 2.4rem;
@@ -33,19 +39,20 @@ font-size: 1.6rem;
 
 header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+  background: $gradient;
+  transition: all 0.5s ease-in;
 }
 
 .container-welcome {
   background-size: cover;
-  width: 50%;
+  //width: 100%;
   max-width: 122.5rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  //padding: 1rem;
 }
 
 nav {
@@ -58,12 +65,12 @@ nav {
 .menu-toggle {
   color: $white;
   font-size: 2.2rem;
-  position: absolute;
-  top: 50%;
-  right: 9.5rem;
+  position: fixed;
+  top: 5%;
+  right: 5.5rem;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index:1000;
+  z-index:5000;
   text-shadow: 0.1rem 0.1rem 0.2rem $secondFontColor;
 }
 
@@ -74,9 +81,9 @@ nav {
 .nav-list {
   list-style: none;
   position: fixed;
-  top: -1rem;
+  top: -5rem;
   left: 0;
-  width: 40%;
+  width: 65%;
   height: 100vh;
   background-color: $mainFontColor;
   padding: 4.4rem;
@@ -102,6 +109,7 @@ nav {
   transition: opacity .5s;
 }
 
+
 .open .fa-times:before {
   display: block;
 }
@@ -113,6 +121,7 @@ nav {
 .open .nav-list {
   transform: translateX(0);
 }
+
 
 .open .nav::before {
   opacity: 1;
@@ -133,13 +142,16 @@ nav {
   transition: color .5s;
 }
 
+.active, .nav-link::before{
+  color: $white;
+  height: 0.07rem;
+  background-color: $secondFontColor;
+  transition: background-color .5s;
+};
+
 .btn {
   display: inline-block;
   text-transform: uppercase;
-}
-
-.nav-link:hover {
-  color: $secondFontColor;
 }
 
 .logo {
@@ -148,7 +160,7 @@ nav {
 
 .headline-logo {
   color: $white;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-family: $logo;
   text-shadow: 0.1rem 0.1rem 0.2rem $secondFontColor;
 }
@@ -166,22 +178,28 @@ nav {
 }
 
 .sub-headline {
-  font-size: 6rem;
-  font-family: $tribal;
-  color: $mainFontColor;
-  line-height: .4;
+  font-size: 7rem;
+  font-family:$tribal;
+  color: $white;
+  line-height: 4rem;
   letter-spacing: 0.2rem;
+  text-shadow: 1px 1px 1px $secondFontColor;
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .5s;
 }
 
 .first-letter {
-  font-size: 10rem;
+  font-size: 6rem;
 }
 
 .headline {
   color: $secondFontColor;
-  font-size: 5rem;
+  margin: 1rem;
+  font-size: 7rem;
   font-family: $logo;
   text-shadow: 1px 1px 1px $mainFontColor;
+  animation: scaleHeadline .5s forwards;
 }
 
 .separator {
@@ -194,33 +212,39 @@ nav {
   height: 0.2rem;
   width: 100%;
   max-width: 14rem;
-  background-color: $mainFontColor;
+  background-color: $white;
   position: relative;
   margin: 0.5rem;
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: .9s;
 }
 
-.line-left::before,
-.line-right::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 0.4rem solid transparent;
-}
-
-.line-left::before {
-  border-left-color: $mainFontColor;
-  left:0;
-}
-
-.line-right::before {
-  border-right-color: $mainFontColor;
-  right: 0;
-}
+//.line-left::before,
+//.line-right::before {
+//  content: '';
+//  position: absolute;
+//  top: 50%;
+//  transform: translateY(-50%);
+//  border: 0.4rem solid transparent;
+//}
+//
+//.line-left::before {
+//  border-left-color: $white;
+//  left:0;
+//}
+//
+//.line-right::before {
+//  border-right-color: $white;
+//  right: 0;
+//}
 
 .asterisk {
   font-size: 2rem;
-  color: $mainFontColor;
+  color: $white;
+  opacity: 0;
+  animation: spin .5s forwards;
+  animation-delay: 1.5s;
 }
 .headline-description{
   font-size: 2rem;
@@ -234,7 +258,7 @@ nav {
 }
 
 .cta-btn {
-  background-color: $mainFontColor;
+  //background-color: $mainFontColor;
   padding: 1rem;
   border-radius: 1rem;
   transition:bacground-color .5s;
@@ -247,8 +271,6 @@ nav {
 }
 
 .text-btn {
-
-
   font-size: 2rem;
   padding: 1rem;
 }
@@ -261,9 +283,14 @@ nav {
 
 .headline-dark {
   color: $mainFontColor;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: .5rem;
   //text-shadow: 1px 1px 1px $secondFontColor;
   margin: 1rem;
+}
+
+.headline-dark:nth-of-type(odd){
+  color: $white;
 }
 
 .discover-our-story .global-headline {
@@ -273,12 +300,12 @@ nav {
 }
 
 .sub-headline-dark {
-  font-size: 6rem;
+  font-size: 7rem;
   font-family: $tribal;
   color: $secondFontColor;
   line-height: .4;
   letter-spacing: 0.2rem;
-  margin: 0;
+  margin: 0; text-shadow: 1px 1px 1px $mainFontColor;
 }
 
 .info {
@@ -316,10 +343,16 @@ nav {
   background-color: $mainFontColor;
 }
 
+.single-animation {
+  opacity: 0;
+  animation: fadedown .5s forwards;
+  animation-delay: 1.5s;
+}
+
 //tattoos
 
 .my-tattoos {
-  background: url("../images/327729-P9L56L-554.jpg") center no-repeat;
+  background: url("../images/24948.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -338,7 +371,7 @@ nav {
 //perfect blend
 
 .perfect-blend {
-  background: url("../images/327729-P9L56L-554.jpg") center no-repeat;
+  background: url("../images/914.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -368,10 +401,11 @@ footer {
   display: block;
   font-size: 2rem;
   padding: 2rem;
+  animation: up 2s infinite;
 }
 
 .footer-content {
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 .footer-content h4{
@@ -443,6 +477,179 @@ footer {
   margin-left: 10rem;
 }
 
+
 //media queries
+
+@media screen and (min-width: 900px){
+  section{
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .container-welcome {
+    width: 100%;
+  }
+
+  .menu-toggle{
+    display: none;
+  }
+
+  .nav{
+    justify-content: space-between;
+  }
+  .nav-list {
+    position: initial;
+    width: 185%;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: flex-end;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+  }
+
+  .nav-item {
+    margin: 0 1.4rem;
+    border: none;
+  }
+  .nav-item:last-child{
+    margin-right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .headline-logo {
+    font-size: 3.5rem;
+  }
+  .sub-headline-dark {
+    font-size: 10rem;
+  }
+  .headline-dark{
+    font-size: 3rem;
+  }
+
+  .sub-headline {
+    font-size:8rem;
+    line-height: 6rem;
+  }
+
+  .first-letter {
+    font-size: 10rem;
+  }
+  .line{
+    max-width: 11.4rem;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+  }
+  .info > div {
+   flex: 1;
+  }
+  .padding-right {
+    padding-right: 7rem;
+  }
+  .footer-content {
+    max-width: 77.5rem;
+    margin: auto;
+  }
+
+  .footer-content-about {
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+
+  .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-media,
+  .newsletter-form {
+    width: 100%;
+    max-width: 27rem;
+  }
+
+  .social-icons {
+    opacity: 1;
+  }
+  .newsletter-btn{
+    margin-left: 6.5rem;
+  }
+}
+
+
+//animations
+
+@keyframes fadeUp {
+  0%{
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes scaleHeadline {
+  0%{
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes grow {
+  0%{
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  0%{
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(-360deg);
+  }
+}
+
+
+@keyframes fadedown {
+  0%{
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes up {
+  0%{
+   opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+
+
+
 
 
