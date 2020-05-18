@@ -7,18 +7,32 @@ const selectElement =(element)=>{
 let menuToggle = selectElement('.menu-toggle');
 let body= selectElement('body');
 let headerTag = selectElement('header');
+let listTag = document.getElementById('list');
+let linkTag = listTag.getElementsByClassName('nav-link');
+
 
 menuToggle.addEventListener('click', ()=>{
   body.classList.toggle('open');
 });
 
+let scrolled=()=>{
+  let dec = scrollY /(body.scrollHeight - innerHeight);
+  return Math.floor(dec * 100)
+};
+
+addEventListener('scroll',()=>{
+  headerTag.style.setProperty('background', scrolled() > 2 ? "#252525" : "linear-gradient(to bottom, rgba(0,0,0,1), transparent)")
+});
+addEventListener('scroll',()=>{
+  logo.style.setProperty('font-size', scrolled() > 2 ? "4rem" : "3rem" )
+});
+
+
 
 // pressed navigation
-let listTag = document.getElementById('list');
-let linkTag = listTag.getElementsByClassName('nav-link');
 
 for (var i = 0; i < linkTag.length; i++) {
-  linkTag[i].addEventListener("click", function() {
+  linkTag[i].addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace("active", "");
     this.className += " active";
@@ -59,17 +73,6 @@ sr.reveal('.animate-bottom',{
 
 // change color nav
 
-
-let scrolled=()=>{
-let dec = scrollY /(body.scrollHeight - innerHeight);
-  return Math.floor(dec * 100)
-};
-
-addEventListener('scroll',()=>{
-  headerTag.style.setProperty('background', scrolled() > 15 ? "#252525" : "linear-gradient(to bottom, rgba(0,0,0,1), transparent)")
-});
-
-// nav underscore
 
 
 

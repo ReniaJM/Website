@@ -14,7 +14,6 @@ section {
   overflow: hidden;
 }
 
-
 img {
   width: 100%;
   max-width: 100%;
@@ -29,7 +28,6 @@ font-size: 1.6rem;
 }
 
 .container {
-  //width: 100%;
   max-width: 122.5rem;
   margin: 0 auto;
   padding: 0 2.4rem;
@@ -146,6 +144,7 @@ nav {
   color: $white;
   height: 0.07rem;
   background-color: $secondFontColor;
+  box-shadow: 0 0 1rem 0 $secondFontColor inset, 0 0 1rem 0.2rem $secondFontColor;
   transition: background-color .5s;
 };
 
@@ -170,7 +169,7 @@ nav {
 .hero{
   width: 100%;
   height: 100vh;
-  background: url("../images/hero.jpg") center no-repeat;
+  background: url("../images/people-2562500_1920.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -183,7 +182,7 @@ nav {
   color: $white;
   line-height: 4rem;
   letter-spacing: 0.2rem;
-  text-shadow: 1px 1px 1px $secondFontColor;
+  text-shadow: 0.1rem 0.1rem 0.1rem $secondFontColor;
   opacity: 0;
   animation: fadeUp .5s forwards;
   animation-delay: .5s;
@@ -198,7 +197,7 @@ nav {
   margin: 1rem;
   font-size: 7rem;
   font-family: $logo;
-  text-shadow: 1px 1px 1px $mainFontColor;
+  text-shadow:0.1rem 0.1rem 0.1rem $mainFontColor;
   animation: scaleHeadline .5s forwards;
 }
 
@@ -209,7 +208,7 @@ nav {
 }
 
 .line {
-  height: 0.2rem;
+  height: 0.1rem;
   width: 100%;
   max-width: 14rem;
   background-color: $white;
@@ -219,25 +218,6 @@ nav {
   animation: grow 2s forwards;
   animation-delay: .9s;
 }
-
-//.line-left::before,
-//.line-right::before {
-//  content: '';
-//  position: absolute;
-//  top: 50%;
-//  transform: translateY(-50%);
-//  border: 0.4rem solid transparent;
-//}
-//
-//.line-left::before {
-//  border-left-color: $white;
-//  left:0;
-//}
-//
-//.line-right::before {
-//  border-right-color: $white;
-//  right: 0;
-//}
 
 .asterisk {
   font-size: 2rem;
@@ -253,12 +233,11 @@ nav {
 .btn {
   display: inline-block;
   font-size: 1.6rem;
-  color: $secondFontColor;
+  color: $mainFontColor;
   margin-top: 1rem;
 }
 
 .cta-btn {
-  //background-color: $mainFontColor;
   padding: 1rem;
   border-radius: 1rem;
   transition:bacground-color .5s;
@@ -266,7 +245,7 @@ nav {
 
 .cta-btn:hover,
 .cta-btn:focus {
-  color: $white;
+  color: $mainFontColor;
   background-color: $secondFontColor;
 }
 
@@ -285,7 +264,6 @@ nav {
   color: $mainFontColor;
   font-size: 2.5rem;
   letter-spacing: .5rem;
-  //text-shadow: 1px 1px 1px $secondFontColor;
   margin: 1rem;
 }
 
@@ -305,7 +283,8 @@ nav {
   color: $secondFontColor;
   line-height: .4;
   letter-spacing: 0.2rem;
-  margin: 0; text-shadow: 1px 1px 1px $mainFontColor;
+  margin: 0;
+  text-shadow: 0.1rem 0.1rem  0.1rem $mainFontColor;
 }
 
 .info {
@@ -316,31 +295,32 @@ nav {
   margin-bottom: 2rem;
   line-height: 2.5rem;
 }
+
+
 .body-btn {
-  position: relative;
-  color: $secondFontColor;
-  transition: color .5s;
+  border-color:$secondFontColor;
+  color: $mainFontColor;
+  box-shadow: 0 0 4rem 4rem $secondFontColor inset, 0 0 0 0 $secondFontColor;
+  transition: all 150ms ease-in-out;
+  padding: 1rem;
+  border-radius: 0.2rem;
+
+  &:hover {
+    box-shadow: 0 0 1rem 0 $secondFontColor inset, 0 0 1rem 0.4rem $secondFontColor;
+  }
 }
 
-.body-btn::before {
-  content: '';
-  width: 100%;
-  height: 0.2rem;
-  background-color: $secondFontColor;
-  position: absolute;
-  left: 0;
-  bottom: -0.3rem;
-  transition: background-color .5s;
-}
+.btnBlueGreen{
+  border-color:$secondFontColor;
+  color: $white;
+  box-shadow: 0 0 4rem 4rem $secondFontColor inset, 0 0 0 0 $secondFontColor;
+  transition: all 150ms ease-in-out;
+  padding: 1rem;
+  border-radius: 0.2rem;
 
-.body-btn:hover,
-.body-btn:focus {
- color: $mainFontColor;
-}
-
-.body-btn:hover::before,
-.body-btn:focus::before {
-  background-color: $mainFontColor;
+  &:hover {
+    box-shadow: 0 0 1rem 0 $secondFontColor inset, 0 0 1rem 0.4rem $secondFontColor;
+  }
 }
 
 .single-animation {
@@ -481,6 +461,12 @@ footer {
 //media queries
 
 @media screen and (min-width: 900px){
+  .active, .nav-link::before{
+    color: $white;
+    height: 0.07rem;
+    background-color: $secondFontColor;
+    transition: background-color .5s;
+  };
   section{
     padding: 5rem 0;
     display: flex;
@@ -541,7 +527,7 @@ footer {
     font-size: 10rem;
   }
   .line{
-    max-width: 11.4rem;
+    max-width: 14rem;
   }
   .info {
     display: flex;
@@ -624,7 +610,6 @@ footer {
     transform: rotateX(-360deg);
   }
 }
-
 
 @keyframes fadedown {
   0%{
