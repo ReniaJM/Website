@@ -348,6 +348,14 @@ nav {
   grid-gap: 1rem;
 }
 
+.image-group img:hover {
+  box-shadow: 0 0 1rem 0 $secondFontColor inset, 0 0 1rem 0.4rem $secondFontColor;
+  transform: scale(1.025) translate(calc 0 / 50 * 1px), calc (0 / 50 * 1px);
+  animation: fade-in calc(600ms) / 2 cubic-bezier(0.25, 0.46, 0.45, 0.84) forwards;
+}
+
+
+
 //perfect blend
 
 .perfect-blend {
@@ -357,12 +365,13 @@ nav {
 
 
 //footer
-footer {
+.footer {
   padding: 8rem 0;
   background-color: $mainFontColor;
   color: $white;
   text-align: center;
   position: relative;
+  overflow: auto;
 }
 
 .back-to-top {
@@ -370,7 +379,7 @@ footer {
   height: 7rem;
   background-color: $mainFontColor;
   position: absolute;
-  top: -3rem;
+  top: 0rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
@@ -427,7 +436,7 @@ footer {
 
 .social-icons i:hover,
 .social-icons i:focus {
- color: $secondFontColor;
+  box-shadow: 0 0 1rem 0 $secondFontColor inset, 0 0 1rem 0.2rem $secondFontColor;
 }
 
 .newsletter-form {
@@ -634,6 +643,11 @@ footer {
   }
 }
 
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
 
 
 
