@@ -6,42 +6,77 @@
   minimum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Tatoo</title>
+  <meta name="description" content="Tattoo salon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" >
   <link rel="stylesheet" href="css/vendors/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+
   <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
     <header>
       <div class="container">
-        <nav class="nav">
-          <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-          </div>
+<!--        <nav class="nav">-->
+<!--          <div class="menu-toggle">-->
+<!--            <i class="fas fa-bars"></i>-->
+<!--            <i class="fas fa-times"></i>-->
+<!--          </div>-->
+<!--          <div class="logo">-->
+<!--            <a href="#hero">-->
+<!--              <h2 class="headline-logo" id="logo">Ya Hanzo</h2>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <ul class="nav-list" id="list">-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#hero" class="nav-link active">-->
+<!--                Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#about-me" class="nav-link">O mnie</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#my-work" class="nav-link">Moje prace</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#inspirations" class="nav-link">Inspiracje</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#contact" class="nav-link">Kontakt</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </nav>-->
+
+        <nav role="navigation" class="nav">
           <div class="logo">
             <a href="#hero">
-              <h1 class="headline-logo" id="logo">Ya Hanzo</h1>
+              <h2 class="headline-logo" id="logo">Ya Hanzo</h2>
             </a>
           </div>
-          <ul class="nav-list" id="list">
-            <li class="nav-item">
-              <a href="#hero" class="nav-link active">
-                Home</a>
+          <a class="ic menu" tabindex="1">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </a>
+          <a  class="ic close"></a>
+          <ul class="main-nav" id="list">
+            <li class="top-level-link">
+              <a href="#hero" class="nav-link active">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="#about-me" class="nav-link">About me</a>
+            <li class="top-level-link">
+              <a href="#about-me" class="nav-link">O mnie</a>
             </li>
-            <li class="nav-item">
-              <a href="#my-work" class="nav-link">My work</a>
+            <li class="top-level-link">
+              <a href="#my-work"class="nav-link">Tatuaże</a>
             </li>
-            <li class="nav-item">
-              <a href="#inspirations" class="nav-link">Inspirations</a>
+            <li class="top-level-link nav-item">
+              <a href="#process" class="nav-link">Proces</a>
             </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
+            <li class="top-level-link">
+              <a href="#contact" class="nav-link">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -52,8 +87,8 @@
       <div class="container-welcome"></div>
         <div class="container-welcome">
 <!--          <img src="images/tattoo_1.png" alt="tattoo-graphic">-->
-          <h1 class="sub-headline"><span class="first-letter">T</span>attoo salon</h1>
-          <h1 class="headline">Ya Hanzo</h1>
+          <h1 class="sub-headline"><span class="first-letter">S</span>alon tatuzu</h1>
+          <h2 class="headline">Ya Hanzo</h2>
           <div class="headline-description">
             <div class="separator">
               <div class="line line-left"></div>
@@ -62,7 +97,7 @@
             </div>
             <div class="single-animation">
 <!--              <div class="text-btn">Ready to be open</div>-->
-              <a href="#about-me" class="btn body-btn btnBlueGreen">Explore</a>
+              <a href="#about-me" class="btn body-btn btnBlueGreen">Więcej</a>
             </div>
 <!--            <img src="images/tattoo_2.png" alt="tattoo-graphic">-->
           </div>
@@ -74,12 +109,12 @@
         <div class="info">
           <div class="container-description padding-right animate-left">
             <div class="global-headline">
-              <p class="sub-headline-dark"><span class="first-letter">D</span>iscover</p>
-              <p class="headline-dark">My Story</p>
+              <p class="sub-headline-dark"><span class="first-letter">P</span>oznaj</p>
+              <p class="headline-dark">mnie</p>
               <div class="asterisk"><i class="fas fa-skull-crossbones"></i></div>
             </div>
               <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet consectetur cum deleniti dicta dignissimos dolor doloremque dolorum ea enim fuga fugiat fugit ipsa, iure maiores mollitia nam officia perspiciatis quae quas quibusdam, repellendus rerum, sed sequi ullam veniam vero voluptatem voluptates voluptatum? Expedita explicabo saepe sapiente tenetur velit.</p>
-            <a href="#about-me" class="btn body-btn">About me</a>
+            <a href="#contact" class="btn body-btn btnBlueGreen">Zapisz się na konsultację!</a>
           </div>
           <div class="info-img animate-right">
             <img src="./images/OIHD230.jpg" alt="">
@@ -92,10 +127,10 @@
       <div class="container">
         <div class="global-headline">
           <div class="animate-top">
-            <p class="sub-headline-dark"><span class="first-letter">T</span>attoos</p>
+            <p class="sub-headline-dark"><span class="first-letter">T</span>atuaze</p>
           </div>
           <div class="animate-bottom">
-            <p class="headline-dark">my love</p>
+            <p class="headline-dark">to moja miłość</p>
           </div>
         </div>
       </div>
@@ -105,50 +140,67 @@
     <section class="discover-my-work section" id="my-work">
       <div class="container">
         <div class="info">
-          <div class="image-group padding-right animate-left">
-            <img src="./images/first_tattoo.png" alt="">
-            <img src="./images/second_tattoo.png" alt="">
-            <img src="./images/third_tattoo.png" alt="">
-            <img src="./images/fourth_tattoo.png" alt="">
-
-          </div>
           <div class="container-description  animate-right">
             <div class="global-headline">
-              <p class="sub-headline-dark"><span class="first-letter">D</span>iscover</p>
-              <p class="headline-dark">My work</p>
+              <p class="sub-headline-dark"><span class="first-letter">O</span>dkryj</p>
+              <p class="headline-dark">moje prace</p>
               <div class="asterisk"><i class="fas fa-skull-crossbones"></i></div>
             </div>
             <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet consectetur cum deleniti dicta dignissimos dolor doloremque dolorum ea enim fuga fugiat fugit ipsa, iure maiores mollitia nam officia perspiciatis quae quas quibusdam, repellendus rerum, sed sequi ullam veniam vero voluptatem voluptates voluptatum? Expedita explicabo saepe sapiente tenetur velit.</p>
-            <a href="" class="btn body-btn">View all tattoos</a>
           </div>
+          <div>
+
+          </div>
+          <ul class="image-group-gallery padding-right animate-left gallery">
+          <li>
+            <img src=/images/first_tattoo.png />
+          </li>
+          <li><img src=/images/second_tattoo.png /></li>
+          <li><img src=/images/third_tattoo.png /></li>
+          <li><img src=/images/first_tattoo.png /></li>
+          <li><img src=/images/second_tattoo.png /></li>
+          <li><img src=/images/third_tattoo.png /></li>
+          <li><img src=/images/first_tattoo.png /></li>
+          <li><img src=/images/second_tattoo.png /></li>
+          <li><img src=/images/third_tattoo.png /></li>
+            <li><img src=/images/second_tattoo.png /></li>
+            <li><img src=/images/third_tattoo.png /></li>
+            <li><img src=/images/first_tattoo.png /></li>
+            <li><img src=/images/second_tattoo.png /></li>
+            <li><img src=/images/third_tattoo.png /></li>
+        </ul>
+
+<!--          <a href="" class="btn body-btn btnBlueGreen more">Zobacz więcej</a>-->
+          <div class="btn body-btn more">Zobacz więcej</div>
+          <div class="btn body-btn less">Zwiń</div>
         </div>
       </div>
     </section>
     <!--the perfect blend ends-->
-    <section class="perfect-blend between section" id="inspirations">
+    <section class="perfect-blend between section">
       <div class="container">
         <div class="global-headline">
           <div class="animate-top">
-            <p class="sub-headline-dark"><span class="first-letter">T</span>he favourite</p>
+            <p class="sub-headline-dark"><span class="first-letter">P</span>omysły</p>
           </div>
           <div class="animate-bottom">
-            <p class="headline-dark">inspirations</p>
+            <p class="headline-dark">na tatuaże</p>
           </div>
         </div>
       </div>
     </section>
     <!--the perfect blend ends-->
-    <section class="tattoo-delight section">
+    <section class="tattoo-delight section" id="process">
       <div class="container">
         <div class="info">
           <div class="container-description padding-right animate-left">
             <div class="global-headline">
-              <p class="sub-headline-dark"><span class="first-letter">T</span>attoo</p>
-              <p class="headline-dark">delight</p>
+              <p class="sub-headline-dark"><span class="first-letter">P</span>roces</p>
+              <p class="headline-dark">tworzenia</p>
               <div class="asterisk"><i class="fas fa-skull-crossbones"></i></div>
             </div>
             <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet consectetur cum deleniti dicta dignissimos dolor doloremque dolorum ea enim fuga fugiat fugit ipsa, iure maiores mollitia nam officia perspiciatis quae quas quibusdam, repellendus rerum, sed sequi ullam veniam vero voluptatem voluptates voluptatum? Expedita explicabo saepe sapiente tenetur velit.</p>
-            <a href="" class="btn body-btn">Make a reservation</a>
+            <a href="#fs-frm" class="btn body-btn btnBlueGreen">Zarezerwuj już termin!</a>
           </div>
           <div class="image-group">
               <img class="animate-top" src="./images/833.jpg" alt="">
@@ -158,43 +210,56 @@
       </div>
     </section>
 
-      <section class="footer" id="contact">
+      <section class="footer">
         <div class="container">
           <div class="back-to-top">
             <a href="#hero"><i class="fas fa-chevron-up"></i></a>
           </div>
           <div class="footer-content" id="footer">
             <div class="footer-content-about animate-top">
-              <h4>About</h4><h3 class="headline-logo">Ya Hanzo</h3>
+              <h4>Bądźmy w kontakcie</h4><h3 class="headline-logo">Ya Hanzo</h3>
               <div class="asterisk"><i class="fas fa-skull-crossbones"></i></div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iste libero maiores modi nam optio perferendis quo! Architecto debitis dignissimos dolorem, incidunt ipsum itaque minima nesciunt quasi quisquam veritatis voluptatibus.</p>
             </div>
             <div class="footer-content-divider animate-bottom">
-              <div class="social-media">
-                <h4>Follow along</h4>
-                <ul class="social-icons">
-                  <li>
-                    <a href="#hero"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#hero"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                    <a href="#hero"><i class="fab fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#hero"><i class="fab fa-linkedin-in"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="newsletter-container">
-                <h4>Newsletter</h4>
-                <form action="" class="newsletter-form">
-                  <input type="text" class="newsletter-input" placeholder="Your email address...">
-                  <button class="newsletter-btn" type="submit">
-                    <i class="fas fa-envelope"></i>
-                  </button>
+              <div class="newsletter-container" id="contact">
+                <h4 >Napisz do mnie!</h4>
+<!--                <form action="" class="newsletter-form">-->
+<!--                  <input type="text" class="newsletter-input" placeholder="Your email address...">-->
+<!--                  <button class="newsletter-btn" type="submit">-->
+<!--                    <i class="fas fa-envelope"></i>-->
+<!--                  </button>-->
+<!--                </form>-->
+
+                <form class="newsletter-form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/prana861@gmail.com" method="post">
+                  <fieldset id="fs-frm-inputs">
+                    <div class="label-form"><label for="full-name">Imię i nazwisko</label></div>
+                    <input class="newsletter-input" type="text" name="name" id="full-name" required="">
+                    <div class="label-form"><label for="email-address">E-mail</label></div>
+                    <input class="newsletter-input" type="email" name="_replyto" id="email-address" required="">
+                    <div class="label-form"><label for="message">Podziel się pomysłem</label></div>
+                    <textarea class="newsletter-input" rows="5" name="message" id="message"  required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                  </fieldset>
+                  <input class="btn body-btn submit-btn" type="submit" value="Wyślij">
                 </form>
+                <div class="social-media">
+                  <h4>Bądź na bieżąco!</h4>
+                  <ul class="social-icons">
+                    <li>
+                      <a href="#hero"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#hero"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                      <a href="#hero"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                      <a href="#hero"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
